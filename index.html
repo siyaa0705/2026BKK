@@ -1,0 +1,1410 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>曼谷 4天3夜 自由行｜A 方案融合版</title>
+  <!-- Google Fonts & Lucide Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    :root {
+      --bg-body: #F8FAFC;
+      --bg-card: #FFFFFF;
+      --bg-subtle: #F1F5F9;
+      --text-main: #0F172A;
+      --text-muted: #64748B;
+      --text-light: #94A3B8;
+      
+      --primary: #0D9488;
+      --primary-light: #CCFBF1;
+      --primary-dark: #0F766E;
+      
+      --gold: #D97706;
+      --gold-light: #FEF3C7;
+      
+      --rose: #E11D48;
+      --rose-light: #FFE4E6;
+      
+      --blue: #2563EB;
+      --blue-light: #EFF6FF;
+      
+      --border-color: #E2E8F0;
+      --border-focus: #CBD5E1;
+      
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 20px -2px rgba(0,0,0,0.06);
+      --shadow-lg: 0 10px 30px -4px rgba(0,0,0,0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      font-family: 'Noto Sans TC', 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: 70px;
+    }
+
+    .container {
+      max-width: 1020px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    /* Header & Hero */
+    .hero-header {
+      background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
+      border-bottom: 1px solid var(--border-color);
+      padding: 30px 0 20px;
+    }
+    .hero-badge-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+    .badge-primary { background: var(--primary-light); color: var(--primary-dark); }
+    .badge-gold { background: var(--gold-light); color: var(--gold); }
+    .badge-rose { background: var(--rose-light); color: var(--rose); }
+
+    .hero-title {
+      font-size: 26px;
+      font-weight: 900;
+      color: #0F172A;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+    .hero-subtitle {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 10px;
+    }
+    .hero-subtitle-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Sticky Tab Navigation (支援流暢橫向滑動) */
+    .tab-bar-sticky {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      width: 100%;
+      overflow: hidden;
+    }
+    .tab-nav-wrapper {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+    .tab-nav {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 8px;
+      overflow-x: auto;
+      overflow-y: hidden;
+      padding: 10px 16px;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      -webkit-overflow-scrolling: touch;
+      touch-action: pan-x;
+    }
+    .tab-nav::-webkit-scrollbar { display: none; }
+    .tab-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      border-radius: 9999px;
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--text-muted);
+      background: #F1F5F9;
+      border: 1px solid transparent;
+      cursor: pointer;
+      white-space: nowrap;
+      flex-shrink: 0;
+      user-select: none;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .tab-btn:hover {
+      background: #E2E8F0;
+      color: var(--text-main);
+    }
+    .tab-btn.active {
+      background: var(--primary);
+      color: #FFFFFF;
+      box-shadow: 0 4px 12px rgba(13, 148, 136, 0.25);
+    }
+    .tab-btn.btn-gold.active {
+      background: var(--gold);
+      box-shadow: 0 4px 12px rgba(217, 119, 6, 0.25);
+    }
+
+    /* Tab Content Panels */
+    .tab-content {
+      display: none;
+      padding: 24px 0;
+      animation: fadeIn 0.25s ease-in-out;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Summary Grid */
+    .summary-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .summary-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      box-shadow: var(--shadow-sm);
+    }
+    .summary-card .label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .summary-card .value {
+      font-size: 19px;
+      font-weight: 800;
+      color: #0F172A;
+    }
+    .summary-card .desc {
+      font-size: 11.5px;
+      color: var(--text-light);
+      margin-top: 4px;
+    }
+
+    /* Callouts & Alerts */
+    .alert-box {
+      border-radius: var(--radius-md);
+      padding: 16px 18px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      border: 1px solid transparent;
+    }
+    .alert-danger {
+      background: #FFF1F2;
+      border-color: #FECDD3;
+      color: #9F1239;
+    }
+    .alert-info {
+      background: #F0FDFA;
+      border-color: #CCFBF1;
+      color: #115E59;
+    }
+    .alert-box h4 {
+      font-size: 14px;
+      font-weight: 800;
+      margin-bottom: 4px;
+    }
+    .alert-box p {
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    /* Timeline Day Cards */
+    .day-panel-header {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 18px 20px;
+      margin-bottom: 18px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .day-panel-title {
+      font-size: 18px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .day-cost-tag {
+      background: var(--gold-light);
+      color: #92400E;
+      font-size: 12.5px;
+      font-weight: 800;
+      padding: 4px 12px;
+      border-radius: 9999px;
+    }
+
+    .timeline-wrap {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 22px 24px;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+    }
+    .timeline {
+      position: relative;
+      padding-left: 28px;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 8px;
+      top: 10px;
+      bottom: 10px;
+      width: 2px;
+      background: #E2E8F0;
+    }
+    .t-item {
+      position: relative;
+      margin-bottom: 24px;
+    }
+    .t-item:last-child {
+      margin-bottom: 0;
+    }
+    .t-dot {
+      position: absolute;
+      left: -28px;
+      top: 4px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: #FFFFFF;
+      border: 3px solid var(--primary);
+      z-index: 2;
+    }
+    .t-item.locked .t-dot {
+      border-color: var(--rose);
+      background: var(--rose);
+      box-shadow: 0 0 0 4px rgba(225, 29, 72, 0.15);
+    }
+    .t-head {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 4px;
+    }
+    .t-time {
+      font-family: 'Plus Jakarta Sans', monospace;
+      font-size: 12.5px;
+      font-weight: 800;
+      color: var(--primary-dark);
+      background: var(--primary-light);
+      padding: 2px 8px;
+      border-radius: 6px;
+    }
+    .t-item.locked .t-time {
+      color: #9F1239;
+      background: #FFE4E6;
+    }
+    .t-title {
+      font-size: 15.5px;
+      font-weight: 800;
+      color: #0F172A;
+    }
+    .t-map-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--blue);
+      text-decoration: none;
+      background: var(--blue-light);
+      padding: 2px 8px;
+      border-radius: 6px;
+      margin-left: 4px;
+    }
+    .t-map-link:hover { text-decoration: underline; }
+    .t-price {
+      margin-left: auto;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-muted);
+      background: var(--bg-subtle);
+      padding: 2px 8px;
+      border-radius: 9999px;
+    }
+    .t-body {
+      font-size: 13.5px;
+      color: #334155;
+      margin-top: 5px;
+      line-height: 1.55;
+    }
+    .t-tag-guide {
+      margin-top: 8px;
+      background: #FFFBEB;
+      border-left: 3px solid var(--gold);
+      padding: 8px 12px;
+      border-radius: 0 6px 6px 0;
+      font-size: 12.5px;
+      color: #78350F;
+    }
+    .t-tag-warning {
+      margin-top: 8px;
+      background: #FEF2F2;
+      border-left: 3px solid var(--rose);
+      padding: 8px 12px;
+      border-radius: 0 6px 6px 0;
+      font-size: 12.5px;
+      color: #991B1B;
+    }
+
+    /* Cards Grid (Drivers) */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 14px;
+    }
+    .driver-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 10px;
+      transition: all 0.2s;
+    }
+    .driver-card:hover {
+      box-shadow: var(--shadow-md);
+      border-color: var(--border-focus);
+    }
+    .driver-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .driver-name {
+      font-size: 14.5px;
+      font-weight: 800;
+      color: #0F172A;
+    }
+    .map-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      background: var(--primary-light);
+      padding: 3px 8px;
+      border-radius: 6px;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+    .map-btn:hover { background: #A7F3D0; }
+    .thai-box {
+      background: #F8FAFC;
+      border: 1px dashed #CBD5E1;
+      border-radius: var(--radius-sm);
+      padding: 10px 12px;
+      font-size: 13px;
+      color: #0369A1;
+      font-weight: 600;
+      cursor: pointer;
+      position: relative;
+    }
+    .thai-box:hover {
+      background: #F0F9FF;
+      border-color: #7DD3FC;
+    }
+    .thai-sub {
+      font-size: 11.5px;
+      color: var(--text-light);
+      margin-top: 2px;
+    }
+
+    /* Table Component */
+    .custom-table-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 13.5px;
+    }
+    th {
+      background: #F8FAFC;
+      padding: 12px 16px;
+      font-weight: 800;
+      color: #475569;
+      border-bottom: 1px solid var(--border-color);
+      white-space: nowrap;
+    }
+    td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border-color);
+      color: #334155;
+      vertical-align: middle;
+    }
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: #FAFAFA; }
+
+    /* Checklist Section */
+    .checklist-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 14px;
+    }
+    .check-box-group {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 18px;
+      box-shadow: var(--shadow-sm);
+    }
+    .check-box-group h4 {
+      font-size: 14.5px;
+      font-weight: 800;
+      color: #0F172A;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .check-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 13px;
+      color: #334155;
+      margin-bottom: 9px;
+      cursor: pointer;
+    }
+    .check-row input[type="checkbox"] {
+      margin-top: 3px;
+      width: 15px;
+      height: 15px;
+      accent-color: var(--primary);
+    }
+
+    /* Floating Toast */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 20px;
+      background: #0F172A;
+      color: #FFFFFF;
+      padding: 10px 20px;
+      border-radius: 9999px;
+      font-size: 13px;
+      font-weight: 700;
+      box-shadow: var(--shadow-lg);
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    @media (max-width: 640px) {
+      .hero-title { font-size: 22px; }
+      .timeline-wrap { padding: 18px 14px; }
+      .timeline { padding-left: 22px; }
+      .t-dot { left: -22px; width: 14px; height: 14px; }
+      .day-panel-header { padding: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Hero Header -->
+  <header class="hero-header">
+    <div class="container">
+      <div class="hero-badge-wrap">
+        <span class="badge badge-primary"><i data-lucide="sparkles" size="13"></i> A 方案融合版</span>
+        <span class="badge badge-gold"><i data-lucide="users" size="13"></i> 26 人團體自由行</span>
+        <span class="badge badge-rose"><i data-lucide="shield-check" size="13"></i> 團體代號：BKK04CI260916TZ</span>
+      </div>
+      <h1 class="hero-title">曼谷 4 天 3 夜 自由行手冊</h1>
+      <div class="hero-subtitle">
+        <div class="hero-subtitle-item"><i data-lucide="calendar" size="14"></i> 2026/09/16 (三) – 09/19 (六)</div>
+        <div class="hero-subtitle-item"><i data-lucide="plane" size="14"></i> 華航 CI833 / CI836</div>
+        <div class="hero-subtitle-item"><i data-lucide="hotel" size="14"></i> Cross Vibe Sukhumvit (BTS On Nut)</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sticky Tab Navigation (支援左右自由滑動) -->
+  <div class="tab-bar-sticky">
+    <div class="tab-nav-wrapper">
+      <div class="container" style="padding: 0;">
+        <nav class="tab-nav" id="tabNav">
+          <button class="tab-btn active" onclick="switchTab('overview', this)"><i data-lucide="compass" size="14"></i> 行程總覽</button>
+          <button class="tab-btn" onclick="switchTab('day1', this)"><i data-lucide="calendar" size="14"></i> Day 1 (三)</button>
+          <button class="tab-btn" onclick="switchTab('day2', this)"><i data-lucide="calendar" size="14"></i> Day 2 (四)</button>
+          <button class="tab-btn" onclick="switchTab('day3', this)"><i data-lucide="calendar" size="14"></i> Day 3 (五)</button>
+          <button class="tab-btn" onclick="switchTab('day4', this)"><i data-lucide="calendar" size="14"></i> Day 4 (六)</button>
+          <button class="tab-btn btn-gold" onclick="switchTab('drivers', this)"><i data-lucide="car" size="14"></i> 🚕 司機字卡</button>
+          <button class="tab-btn" onclick="switchTab('foodwords', this)"><i data-lucide="utensils" size="14"></i> 🍜 點餐保命</button>
+          <button class="tab-btn" onclick="switchTab('budget-check', this)"><i data-lucide="check-square" size="14"></i> 預算 ✕ 清單</button>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <main class="container">
+    
+    <!-- TAB 1: 行程總覽 (OVERVIEW) -->
+    <div id="overview" class="tab-content active">
+      <div class="summary-cards">
+        <div class="summary-card">
+          <div class="label"><i data-lucide="wallet" size="13"></i> 每人預估總花費</div>
+          <div class="value" style="color: var(--gold);">約 10,280 ฿</div>
+          <div class="desc">預算上限 15,000 ฿（餘裕約 4,720 ฿）</div>
+        </div>
+        <div class="summary-card">
+          <div class="label"><i data-lucide="banknote" size="13"></i> 泰銖現鈔準備</div>
+          <div class="value">12,000–15,000 ฿</div>
+          <div class="desc">另備台幣 10,000~15,000 元隨身備查</div>
+        </div>
+        <div class="summary-card">
+          <div class="label"><i data-lucide="refresh-cw" size="13"></i> K79 換匯所</div>
+          <div class="value">BTS On Nut 1 號出口</div>
+          <div class="desc">飯店巷口，匯率同水門 SuperRich</div>
+        </div>
+      </div>
+
+      <!-- 不可變動的兩件事 Alert -->
+      <div class="alert-box alert-danger">
+        <i data-lucide="alert-octagon" size="22" style="flex-shrink: 0; margin-top: 2px;"></i>
+        <div>
+          <h4>🔒 不可變動的兩件事（團體行程）</h4>
+          <p><strong>Day 1 17:00</strong> Asiatique 碼頭夜市 26 人合菜（6 號倉庫 Peppery Thai Bistro，最晚 15:45 須從 Siam 出發）<br>
+             <strong>Day 2 07:45 起</strong> Klook 曼谷經典地標一日遊（大皇宮/玉佛寺/臥佛寺/鄭王廟，已購票且有嚴格著裝要求）</p>
+        </div>
+      </div>
+
+      <!-- 這一版亮點與動線 -->
+      <div class="custom-table-card">
+        <table>
+          <thead>
+            <tr>
+              <th>📌 精選地點</th>
+              <th>排在哪一天</th>
+              <th>為什麼這樣排（動線亮點）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Siam Paragon 美食街海南雞飯</strong></td>
+              <td><span class="badge badge-primary">Day 1 午餐</span></td>
+              <td>BTS Siam 直達，在冷氣房享用正宗雙拼海南雞飯，吃完下樓逛街超順路</td>
+            </tr>
+            <tr>
+              <td><strong>garcon dept（文青選品）</strong></td>
+              <td><span class="badge badge-primary">Day 1 下午</span></td>
+              <td>Siam Square Soi 2，和原本的 Nikko 按摩（Soi 5）就在隔壁巷，逛街超順</td>
+            </tr>
+            <tr>
+              <td><strong>Asiatique 碼頭夜市逛街採買</strong></td>
+              <td><span class="badge badge-primary">Day 1 晚上</span></td>
+              <td>17:00 合菜結束後，原地體驗 36 層樓高 Sky Flyer 高空鞦韆、NaRaYa 曼谷包與河畔夜市採買</td>
+            </tr>
+            <tr>
+              <td><strong>ICONSIAM / SOOKSIAM</strong></td>
+              <td><span class="badge badge-primary">Day 2 傍晚</span></td>
+              <td>維持經典行程，河畔水路直達，冷氣房內體驗室內水上市集與通斯密船麵</td>
+            </tr>
+            <tr>
+              <td><strong>Pista&（開心果咖啡）</strong></td>
+              <td><span class="badge badge-primary">Day 3 上午</span></td>
+              <td>與 Samatha 按摩同在老城區（Song Wat 路），兩點串成半日文青散策</td>
+            </tr>
+            <tr>
+              <td><strong>Samatha 按摩（辦公室專屬）</strong></td>
+              <td><span class="badge badge-primary">Day 3 中午</span></td>
+              <td>專門舒緩久坐肩頸且力道適中不痛，省下預算充抵伴手禮</td>
+            </tr>
+            <tr>
+              <td><strong>Factory Coffee（冠軍咖啡）</strong></td>
+              <td><span class="badge badge-primary">Day 4 早餐</span></td>
+              <td>用 Grab 外送直送飯店大廳，免跨城頂著太陽排隊即可享用神級可頌與咖啡</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 交通支付準備 Alert -->
+      <div class="alert-box alert-info">
+        <i data-lucide="credit-card" size="22" style="flex-shrink: 0; margin-top: 2px;"></i>
+        <div>
+          <h4>💳 交通支付準備小指南</h4>
+          <p>• <strong>BTS 空鐵</strong>：無法刷國外信用卡，售票機用紙鈔買單程票，或買一張兔子卡（Rabbit Card）省排隊時間。<br>
+             • <strong>MRT 地鐵</strong>：可直接感應台灣 Visa/Mastercard 晶片信用卡或 Apple Pay 過閘門。<br>
+             • <strong>Grab / Bolt 叫車</strong>：App 內綁定信用卡線上扣款免找零，亦可備 20/50/100 泰銖紙鈔付現。<br>
+             • <strong>接駁渡輪</strong>：Asiatique 接駁船免費；ICONSIAM 藍色觀光渡輪需 30 THB 現金。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 2: Day 1 (三) -->
+    <div id="day1" class="tab-content">
+      <div class="day-panel-header">
+        <div class="day-panel-title">
+          <i data-lucide="sun" size="22" style="color: var(--gold);"></i> Day 1｜09/16 (三) 抵達・Siam 商圈・碼頭合菜與夜市
+        </div>
+        <span class="day-cost-tag">當日預估：約 2,300 THB</span>
+      </div>
+
+      <div class="timeline-wrap">
+        <div class="timeline">
+          <div class="t-item">
+            <div class="t-dot"></div>
+            <div class="t-head">
+              <span class="t-time">09:45</span>
+              <span class="t-title">抵達 BKK 機場 ➔ 專屬遊覽車直達飯店寄行李</span>
+              <a href="https://www.google.com/maps/search/?api=1&query=Cross+Vibe+Bangkok+Sukhumvit" target="_blank" class="t-map-link"><i data-lucide="map-pin" size="12"></i> 飯店地圖</a>
+              <span class="t-price">接送包含</span>
+            </div>
+            <div class="t-body">入境後至 B 號門綠色通道集合，搭乘專屬遊覽車前往 Cross Vibe Sukhumvit（約 35 分鐘）。</div>
+          </div>
+
+          <div class="t-item">
+            <div class="t-dot"></div>
+            <div class="t-head">
+              <span class="t-time">11:00</span>
+              <span class="t-title">K79 換匯所換泰銖</span>
+              <a href="https://www.google.com/maps/search/?api=1&query=K79+exchange+On+Nut" target="_blank" class="t-map-link"><i data-lucide="map-pin" size="12"></i> 換匯地圖</a>
+              <span class="t-price">—</span>
+            </div>
+            <div class="t-body">位於飯店巷口、BTS On Nut 1 號出口旁。持千元台幣現鈔直接兌換，匯率極佳。</div>
+          </div>
+
+          <div class="t-item">
+            <div class="t-dot"></div>
+            <div class="t-head">
+              <span class="t-time">11:30</span>
+              <span class="t-title">出發前往 Siam 商圈</span>
+              <span class="t-price">45 ฿</span>
+            </div>
+            <div class="t-body">搭乘 BTS 淺綠線從 On Nut 直達 Siam 站（約 20 分鐘免轉車）。</div>
+          </div>
+
+          <div class="t-item">
+            <div class="t-dot"></div>
+            <div class="t-head">
+              <span class="t-time">12:00</span>
+              <span class="t-title">Siam Paragon 美食街海南雞飯午餐</span>
+              <a href="https://www.google.com/maps/search/?api=1&query=Siam+Paragon+Food+Hall" target="_blank" class="t-map-link"><i data-lucide="map-pin" size="12"></i> 美食街地圖</a>
+              <span class="t-price">約 150 ฿</span>
+            </div>
+            <div class="t-body">Siam Paragon G 樓 Food Hall。冷氣舒適，點餐便利。</div>
+            <div class="t-tag-guide">👉 推薦必點：雙拼海南雞飯（白切雞滑嫩、酥脆炸雞，沾靈魂特調蒜辣醬），搭配清甜雞油香米飯。完全不辣，友善美味！</div>
+          </div>
+
+          <div class="t-item">
+            <div class="t-dot"></div>
+            <div class="t-head">
+              <span class="t-time">13:30</span>
+              <span class="t-title">Nikko Thai Massage 腳底按摩 (60分)</span>
+              <a href="https://www.google.com/maps/search/?api=1&query=Nikko+Thai+Massage+Siam+Square+Soi+5" target="_blank" class="t-map-link"><i data-lucide="map-pin" size="12"></i> 按摩地圖</a>
+              <span class="t-price">約 490 ฿</span>
+            </div>
+            <div class="t-body">BTS Siam 4 號出口下樓 ➔ Siam Square Soi 5 巷內步行 2 分鐘，舒緩搭機疲勞。技師小費 50–100 THB 付現。</div>
+          </div>
+
+          <div class="t-item">
+            <div class="t-dot"></div>
+            <div class="t-head">
+              <span class="t-time">14:40</span>
+              <span class="t-title">garcon dept 選品店 ✕ Siam Square 潮流散策</span>
+              <a href="https://www.google.com/maps/search/?api=1&query=garcon+dept+Siam+Square+Soi+2" target="_blank" class="t-map-link"><i data-lucide="map-pin" size="12"></i> 選品地圖</a>
+              <span class="t-price">約 400 ฿</span>
+            </div>
+            <div class="t-body">Siam Square Soi 2（從 Soi 5 走過來 3 分鐘）。中性文青選品、貼紙、飾品、黑膠樂器；同巷多間小店與 After You 蜜糖吐司。</div>
+          </div>
+
+          <div class="t-item locked">
+            <div class="t-dot"></div>
+            <div class="t-head">
+              <span class="t-time">15:45</span>
+              <span class="t-title">出發趕船（重要時間節點）</span>
+              <a href="https://www.google.com/maps/search/?api=1&query=Sathorn+Pier" target="_blank" class="t-map-link"><i data-lucide="map-pin" size="12"></i> 中央碼頭</a>
+              <span class="t-price">40 ฿</span>
+            </div>
+            <div class="t-body">BTS Siam 同月台轉深綠色席隆線（往 Bang Wa）➔ Saphan Taksin 站下車 ➔ 2 號出口中央碼頭搭 Asiatique 免費接駁船。</div>
+            <div class="t-tag-warning">⚠️ 免費接駁船約 16:00 才開航，航程 10 分鐘還要排隊，15:45 必須從 Siam 出發才能趕上 17:00 合菜！</div>
+          </div>
+
+          <div class="t-item locked">
+            <div class="t-dot"></div>
+            <div class="t-head">
+              <span class="t-time">17:00</span>
+              <span class="t-title">🔒 Asiatique 碼頭夜市 26 人合菜</span>
+              <a href="https://www.google.com/maps/search/?api=1&query=Peppery+Thai+Bistro+Asiatique" target="_blank" class="t-map-link"><i data-lucide="map-pin" size="12"></i> 餐廳地圖</a>
+              <span class="t-price">約 600 ฿</span>
+            </div>
+            <div class="t-body">下船直走進 6 號倉庫 Warehouse 6・Peppery Thai Bistro。菜色：無辣蟹肉煎蛋、黃咖哩海鮮、烤豬頸肉、炸蝦餅。</div>
+          </div>
+
+          <div class="t-item">
+            <div class="t-dot"></div>
+            <div class="t-head">
+              <span class="t-time">19:00</span>
+              <span class="t-title">碼頭夜市逛街 ✕ Sky Flyer 高空鞦韆 ✕ NaRaYa 曼谷包</span>
+              <a href="https://www.google.com/maps/search/?api=1&query=Asiatique+The+Riverfront" target="_blank" class="t-map-link"><i data-lucide="map-pin" size="12"></i> 夜市地圖</a>
+              <span class="t-price">約 250 ฿</span>
+            </div>
+            <div class="t-body">在 Asiatique 園區內自由漫步逛街！體驗 36 層樓高 Sky Flyer 高空旋轉鞦韆、現炸酥脆海鮮小吃、採買 NaRaYa 曼谷包與泰國特色文創紀念品。</div>
+          </div>
+
+          <div class="t-item">
+            <div class="t-dot"></div>
+            <div class="t-head">
+              <span class="t-time">21:00</span>
+              <span class="t-title">返回飯店（Cross Vibe Bangkok）</span>
+              <span class="t-price">約 60–100 ฿</span>
+            </div>
+            <div class="t-body">搭乘接駁船返回中央碼頭轉 BTS 回 On Nut，或 26 人分車叫 Grab 返回飯店休息。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 3: Day 2 (四) -->
+    <div id="day2" class="tab-content">
+      <div class="day-panel-header">
+        <div class="day-panel-title">
+          <i data-lucide="landmark" size="22" style="color: var(--primary);"></i> Day 2｜09/17 (四) Klook 寺廟之旅・暹羅天地水上市集
+        </div>
+        <span class="day-cost-tag">當日預估：約 2,200 THB</span>
+      </div>
+
+      <div class="timeline-wrap">
+        <div class="timeline">
+          <div class="t-item locked">
+            <div class="t-dot"></div>
+            <div class="t-head">
+              <span class="t-time">07:45–16:00</span>
+              <span class="t-title">🔒 Klook 曼谷經典地標一日遊（已購票）</span>
+              <a href="https://www.google.com/maps/search/?api=1&query=The+Grand+Palace+Bangkok" target="_blank" class="t-map-link"><i data-lucide="map-pin" size="12"></i> 大皇宮地圖</a>
+              <span class="t-price">約 1,455 ฿</span>
+            </div>
+            <div class="t-body">BTS On Nut 出發直達集合點，隨冷氣專車遊覽：大皇宮、玉佛寺、臥佛寺、鄭王廟。午餐園區自理（約 150 ฿）。</div>
+            <div class="t-tag-warning">⚠️ 嚴格服裝禁忌：嚴禁無袖、短褲、短裙、破洞褲，需穿有袖上衣與過膝長褲/長裙。</div>
+          </div>
+
+          <div class="t-item">
+            <div class="t-dot"></div>
+            <div class="t-head">
+              <span class="t-time">16:30</span>
+              <span class="t-title">渡輪直達 ICONSIAM 暹羅天地</span>
+              <a href="https://www.google.com/maps/search/?api=1&query=ICONSIAM" target="_blank" class="t-map-link"><i data-lucide="map-pin" size="12"></i> ICONSIAM</a>
+              <span class="t-price">30 ฿</span>
+            </div>
+            <div class="t-body">河畔碼頭解散後，直接搭「藍色觀光船」或渡輪到 ICONSIAM 專屬碼頭，水路避開傍晚大塞車。</div>
+          </div>
+
+          <div class="t-item">
+            <div class="t-dot"></div>
+            <div class="t-head">
+              <span class="t-time">17:00</span>
+              <span class="t-title">SOOKSIAM 室內水上市集（G 樓）</span>
+              <a href="https://www.google.com/maps/search/?api=1&query=SOOKSIAM+ICONSIAM" target="_blank" class="t-map-link"><i data-lucide="map-pin" size="12"></i> 市集地圖</a>
+              <span class="t-price">約 250 ฿</span>
+            </div>
+            <div class="t-body">商場裡的迷你版水上市場！冷氣房吃小吃不怕拉肚子，中庭有公共木椅可坐下吃。</div>
+            <div class="t-tag-guide">👉 推薦小吃：現烤椰奶甜豬肉串 Moo Ping（20฿/串）、水仙芒果糯米飯（120฿）、香蕉煎餅（60฿）、現剖香水椰子（70฿）。</div>
+          </div>
+
+          <div class="t-item">
+            <div class="t-dot"></div>
+            <div class="t-head">
+              <span class="t-time">18:30</span>
+              <span class="t-title">Thong Smith 通斯密船麵（ICONSIAM 店）</span>
+              <a href="https://www.google.com/maps/search/?api=1&query=Thong+Smith+ICONSIAM" target="_blank" class="t-map-link"><i data-lucide="map-pin" size="12"></i> 船麵地圖</a>
+              <span class="t-price">約 400 ฿</span>
+            </div>
+            <div class="t-body">同一棟商場內享用船麵界愛馬仕！</div>
+            <div class="t-tag-guide">👉 點餐指南：辣度勾 Level 0、勾 No Morning Glory/Bean Sprouts/Coriander（不加空心菜、豆芽、香菜），加點酥炸餛飩皮與豬油渣。</div>
+          </div>
+
+          <div class="t-item">
+            <div class="t-dot"></div>
+            <div class="t-head">
+              <span class="t-time">19:45</span>
+              <span class="t-title">ICONCRAFT 設計文創 ✕ 2F 空中花園河景</span>
+              <span class="t-price">自由採買</span>
+            </div>
+            <div class="t-body">4–5F 泰國設計師選品與手工銀飾、B 樓 Dear Tummy 超市買伴手禮；至 2F Apple Store 戶外露台免費吹晚風欣賞昭披耶河夜景與水幕燈光秀。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 4: Day 3 (五) -->
+    <div id="day3" class="tab-content">
+      <div class="day-panel-header">
+        <div class="day-panel-title">
+          <i data-lucide="coffee" size="22" style="color: var(--gold);"></i> Day 3｜09/18 (五) 老城區小店・Office Syndrome 按摩・航站百貨
+        </div>
+        <span class="day-cost-tag">當日預估：約 4,800 THB</span>
+      </div>
+
+      <div class="timeline-wrap">
+        <div class="timeline">
+          <div class="t-item">
+            <div class="t-dot"></div>
+            <div class="t-head">
+              <span class="t-time">10:00</span>
+              <span class="t-title">出發前往 Song Wat 石龍軍老街</span>
+              <a href="https://www.google.com/maps/search/?api=1&query=Song+Wat+Road+Bangkok" target="_blank" class="t-map-link"><i data-lucide="map-pin" size="12"></i> 老街地圖</a>
+              <span class="t-price">約 60 ฿</span>
+            </div>
+            <div class="t-body">BTS On Nut ➔ Asok 轉 MRT ➔ Hua Lamphong 站，或 26 人分車搭 Grab（約 250 ฿/車）。</div>
+          </div>
+
+          <div class="t-item">
+            <div class="t-dot"></div>
+            <div class="t-head">
+              <span class="t-time">11:00</span>
+              <span class="t-title">Pista& 開心果咖啡 ✕ 墨鏡選品店散策</span>
+              <a href="https://www.google.com/maps/search/?api=1&query=Pista%26+Song+Wat" target="_blank" class="t-map-link"><i data-lucide="map-pin" size="12"></i> Pista& 地圖</a>
+              <span class="t-price">約 250 ฿</span>
+            </div>
+            <div class="t-body">Song Wat Rd 老街，Google 4.8 分。出店門對面即是超好逛的墨鏡店與老屋改造選品聚落。</div>
+            <div class="t-tag-guide">👉 必點：開心果冰淇淋、開心果提拉米蘇、杜拜巧克力軟餅乾（人均 ฿100–200，留評論有折扣）。</div>
+          </div>
+
+          <div class="t-item">
+            <div class="t-dot"></div>
+            <div class="t-head">
+              <span class="t-time">12:45</span>
+              <span class="t-title">Samatha 泰式按摩（Office Syndrome 專門課程）</span>
+              <a href="https://www.google.com/maps/search/?api=1&query=Samatha+Thai+Massage+Rong+Mueang" target="_blank" class="t-map-link"><i data-lucide="map-pin" size="12"></i> 按摩地圖</a>
+              <span class="t-price">約 1,350 ฿</span>
+            </div>
+            <div class="t-body">位於華藍蓬巷內，專為久坐辦公室設計，力道溫和不痛，按完附贈泰式甜點與熱茶。</div>
+            <div class="t-tag-warning">⚠️ 全店只有 1 間 Private Room，欲包房請務必提前透過官方 IG 預約確認！</div>
+          </div>
+
+          <div class="t-item">
+            <div class="t-dot"></div>
+            <div class="t-head">
+              <span class="t-time">15:30</span>
+              <span class="t-title">Terminal 21 Asok 採買 ✕ Pier 21 美食街</span>
+              <a href="https://www.google.com/maps/search/?api=1&query=Terminal+21+Asok" target="_blank" class="t-map-link"><i data-lucide="map-pin" size="12"></i> T21 地圖</a>
+              <span class="t-price">約 1,650 ฿</span>
+            </div>
+            <div class="t-body">頂樓 Pier 21 吃 Pad Thai 與椰子冰沙；1–3F 逛泰國設計師女裝、3F 金工純銀飾品、LG 樓 Gourmet Market 買手標茶與芒果乾（單店滿 2,000 ฿ 索取黃色退稅單 P.P.10）。</div>
+          </div>
+
+          <div class="t-item">
+            <div class="t-dot"></div>
+            <div class="t-head">
+              <span class="t-time">18:30</span>
+              <span class="t-title">Have a Zeed 精緻泰式合菜（T21 4 樓）</span>
+              <a href="https://www.google.com/maps/search/?api=1&query=Have+a+Zeed+Terminal+21+Asok" target="_blank" class="t-map-link"><i data-lucide="map-pin" size="12"></i> 餐廳地圖</a>
+              <span class="t-price">約 600 ฿</span>
+            </div>
+            <div class="t-body">香酥蟹肉煎蛋、黃咖哩炒海鮮、烤豬頸肉（沾醬分開）、金錢蝦餅。商場內免移動。</div>
+          </div>
+
+          <div class="t-item">
+            <div class="t-dot"></div>
+            <div class="t-head">
+              <span class="t-time">20:30</span>
+              <span class="t-title">曼谷高空酒吧巡禮（三選一）</span>
+              <span class="t-price">約 820 ฿</span>
+            </div>
+            <div class="t-body">
+              • <strong><a href="https://www.google.com/maps/search/?api=1&query=Tichuca+Rooftop+Bar" target="_blank" style="color: var(--blue);">A. Tichuca Rooftop</a></strong>：巨大發光水母燈樹、雨林打卡地標（T-One 46F，須備護照照片）<br>
+              • <strong><a href="https://www.google.com/maps/search/?api=1&query=Octave+Rooftop+Lounge+%26+Bar" target="_blank" style="color: var(--blue);">B. Octave Rooftop</a></strong>：BTS Thong Lo 站旁萬豪 45–49F，360 度環景寬敞沙發 Chill<br>
+              • <strong><a href="https://www.google.com/maps/search/?api=1&query=ABar+Rooftop" target="_blank" style="color: var(--blue);">C. ABar Rooftop</a></strong>：萬豪 Queen's Park 38F，英倫露天花園與精緻調酒
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 5: Day 4 (六) -->
+    <div id="day4" class="tab-content">
+      <div class="day-panel-header">
+        <div class="day-panel-title">
+          <i data-lucide="plane-takeoff" size="22" style="color: var(--blue);"></i> Day 4｜09/19 (六) 咖啡・退房・返台
+        </div>
+        <span class="day-cost-tag">當日預估：約 980 THB</span>
+      </div>
+
+      <div class="timeline-wrap">
+        <div class="timeline">
+          <div class="t-item">
+            <div class="t-dot"></div>
+            <div class="t-head">
+              <span class="t-time">08:30</span>
+              <span class="t-title">Factory Coffee 早餐（Grab 外送直送飯店）</span>
+              <a href="https://www.google.com/maps/search/?api=1&query=Factory+Coffee+Bangkok" target="_blank" class="t-map-link"><i data-lucide="map-pin" size="12"></i> 咖啡地圖</a>
+              <span class="t-price">約 300 ฿</span>
+            </div>
+            <div class="t-body">曼谷頂級神級咖啡與可頌，叫外送免跨城排隊（前一晚可在 Grab 先確認距離與範圍）。</div>
+          </div>
+
+          <div class="t-item">
+            <div class="t-dot"></div>
+            <div class="t-head">
+              <span class="t-time">09:30</span>
+              <span class="t-title">The Wood Land 森林系咖啡（自由散步）</span>
+              <a href="https://www.google.com/maps/search/?api=1&query=The+Wood+Land+Sukhumvit+52" target="_blank" class="t-map-link"><i data-lucide="map-pin" size="12"></i> 森林咖啡</a>
+              <span class="t-price">約 250 ฿</span>
+            </div>
+            <div class="t-body">飯店旁步行 5 分鐘（Sukhumvit 52 巷直走），大片樹蔭草地、手沖黑咖啡與可頌。</div>
+          </div>
+
+          <div class="t-item">
+            <div class="t-dot"></div>
+            <div class="t-head">
+              <span class="t-time">11:30</span>
+              <span class="t-title">打包行李 ✕ 辦理退房</span>
+              <span class="t-price">—</span>
+            </div>
+            <div class="t-body">液體伴手禮（香氛、精油、果醬、蜂蜜）務必放託運；退稅單與護照放隨身包。</div>
+          </div>
+
+          <div class="t-item">
+            <div class="t-dot"></div>
+            <div class="t-head">
+              <span class="t-time">13:30</span>
+              <span class="t-title">Grab / Bolt 出發前往蘇凡納布機場（BKK）</span>
+              <span class="t-price">約 130 ฿</span>
+            </div>
+            <div class="t-body">叫 6 人座廂型車（約 35 分鐘，350–450 ฿/車分攤）。</div>
+          </div>
+
+          <div class="t-item">
+            <div class="t-dot"></div>
+            <div class="t-head">
+              <span class="t-time">14:30</span>
+              <span class="t-title">抵達機場蓋退稅章 ➔ 託運登機</span>
+              <a href="https://www.google.com/maps/search/?api=1&query=Suvarnabhumi+Airport" target="_blank" class="t-map-link"><i data-lucide="map-pin" size="12"></i> 機場地圖</a>
+              <span class="t-price">輕食約 300 ฿</span>
+            </div>
+            <div class="t-body">4F 海關先蓋退稅章 ➔ 華航櫃檯託運（每人 23kg）➔ 過安檢領現金 ➔ <strong>CI836（17:30 起飛，22:05 抵達桃園）</strong>。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 6: 🚕 司機字卡 (DRIVERS) -->
+    <div id="drivers" class="tab-content">
+      <div class="alert-box alert-info">
+        <i data-lucide="info" size="20" style="flex-shrink: 0;"></i>
+        <div>
+          <h4>💡 司機字卡使用說明</h4>
+          <p>點擊泰文字框即可「一鍵複製」，或直接點擊「地圖」開啟 Google Maps 給司機看最精確！</p>
+        </div>
+      </div>
+
+      <div class="card-grid">
+        <!-- 1 Hotel -->
+        <div class="driver-card">
+          <div class="driver-card-top">
+            <span class="driver-name">🏨 飯店 Cross Vibe Bangkok</span>
+            <a href="https://www.google.com/maps/search/?api=1&query=Cross+Vibe+Bangkok+Sukhumvit" target="_blank" class="map-btn">地圖 <i data-lucide="external-link" size="12"></i></a>
+          </div>
+          <div class="thai-box" onclick="copyText('โรงแรมครอส ไวบ์ กรุงเทพ สุขุมวิท (ซอยสุขุมวิท 52 ติด BTS อ่อนนุช)')">
+            โรงแรมครอส ไวบ์ กรุงเทพ สุขุมวิท (ซอยสุขุมวิท 52 ติด BTS อ่อนนุช)
+          </div>
+          <div class="thai-sub">10 Sukhumvit 52 Alley, BTS On Nut</div>
+        </div>
+
+        <!-- 2 Siam Paragon Food Hall -->
+        <div class="driver-card">
+          <div class="driver-card-top">
+            <span class="driver-name">🍗 Siam Paragon 美食街海南雞飯</span>
+            <a href="https://www.google.com/maps/search/?api=1&query=Siam+Paragon+Food+Hall" target="_blank" class="map-btn">地圖 <i data-lucide="external-link" size="12"></i></a>
+          </div>
+          <div class="thai-box" onclick="copyText('สยามพารากอน ชั้น G (โซน Food Hall)')">
+            สยามพารากอน ชั้น G (โซน Food Hall)
+          </div>
+          <div class="thai-sub">Siam Paragon G Floor, Rama I Rd</div>
+        </div>
+
+        <!-- 3 garcon dept -->
+        <div class="driver-card">
+          <div class="driver-card-top">
+            <span class="driver-name">🛍️ garcon dept 選品店</span>
+            <a href="https://www.google.com/maps/search/?api=1&query=garcon+dept+Siam+Square+Soi+2" target="_blank" class="map-btn">地圖 <i data-lucide="external-link" size="12"></i></a>
+          </div>
+          <div class="thai-box" onclick="copyText('สยามสแควร์ ซอย 2')">
+            สยามสแควร์ ซอย 2
+          </div>
+          <div class="thai-sub">236/6 Siam Square Soi 2, Pathum Wan</div>
+        </div>
+
+        <!-- 4 Nikko Massage -->
+        <div class="driver-card">
+          <div class="driver-card-top">
+            <span class="driver-name">💆 Nikko Thai Massage</span>
+            <a href="https://www.google.com/maps/search/?api=1&query=Nikko+Thai+Massage+Siam+Square+Soi+5" target="_blank" class="map-btn">地圖 <i data-lucide="external-link" size="12"></i></a>
+          </div>
+          <div class="thai-box" onclick="copyText('สยามสแควร์ ซอย 5 (ร้าน นิกโกะ มาสซาจ)')">
+            สยามสแควร์ ซอย 5 (ร้าน นิกโกะ มาสซาจ)
+          </div>
+          <div class="thai-sub">Siam Square Soi 5, Rama I Rd</div>
+        </div>
+
+        <!-- 5 Asiatique -->
+        <div class="driver-card">
+          <div class="driver-card-top">
+            <span class="driver-name">🍽️ Asiatique 6 號倉庫合菜</span>
+            <a href="https://www.google.com/maps/search/?api=1&query=Peppery+Thai+Bistro+Asiatique" target="_blank" class="map-btn">地圖 <i data-lucide="external-link" size="12"></i></a>
+          </div>
+          <div class="thai-box" onclick="copyText('เอเชียทีค เดอะ ริเวอร์ฟร้อนท์ (โกดัง 6 ร้าน Peppery Thai Bistro)')">
+            เอเชียทีค เดอะ ริเวอร์ฟร้อนท์ (โกดัง 6 ร้าน Peppery Thai Bistro)
+          </div>
+          <div class="thai-sub">2194 Charoen Krung Rd, Bang Kho Laem</div>
+        </div>
+
+        <!-- 6 ICONSIAM -->
+        <div class="driver-card">
+          <div class="driver-card-top">
+            <span class="driver-name">🏰 ICONSIAM 水上市集</span>
+            <a href="https://www.google.com/maps/search/?api=1&query=ICONSIAM" target="_blank" class="map-btn">地圖 <i data-lucide="external-link" size="12"></i></a>
+          </div>
+          <div class="thai-box" onclick="copyText('ห้างสรรพสินค้า ไอคอนสยาม (ถนนเจริญนคร)')">
+            ห้างสรรพสินค้า ไอคอนสยาม (ถนนเจริญนคร)
+          </div>
+          <div class="thai-sub">299 Charoen Nakhon Rd, Khlong San</div>
+        </div>
+
+        <!-- 7 Pista& -->
+        <div class="driver-card">
+          <div class="driver-card-top">
+            <span class="driver-name">☕ Pista& 開心果咖啡 (Song Wat)</span>
+            <a href="https://www.google.com/maps/search/?api=1&query=Pista%26+Song+Wat" target="_blank" class="map-btn">地圖 <i data-lucide="external-link" size="12"></i></a>
+          </div>
+          <div class="thai-box" onclick="copyText('พิสต้าแอนด์ (ถนนทรงวาด)')">
+            พิสต้าแอนด์ (ถนนทรงวาด)
+          </div>
+          <div class="thai-sub">Song Wat Rd, Samphanthawong</div>
+        </div>
+
+        <!-- 8 Samatha Massage -->
+        <div class="driver-card">
+          <div class="driver-card-top">
+            <span class="driver-name">💆 Samatha 按摩 (Office Syndrome)</span>
+            <a href="https://www.google.com/maps/search/?api=1&query=Samatha+Thai+Massage+Rong+Mueang" target="_blank" class="map-btn">地圖 <i data-lucide="external-link" size="12"></i></a>
+          </div>
+          <div class="thai-box" onclick="copyText('ส ม ถ ะ (ซอยพระยาสิงหเสนี รองเมือง)')">
+            ส ม ถ ะ (ซอยพระยาสิงหเสนี รองเมือง)
+          </div>
+          <div class="thai-sub">476/25 Phraya Singhaseni Alley, Rong Mueang</div>
+        </div>
+
+        <!-- 9 Factory Coffee -->
+        <div class="driver-card">
+          <div class="driver-card-top">
+            <span class="driver-name">☕ Factory Coffee 冠軍咖啡</span>
+            <a href="https://www.google.com/maps/search/?api=1&query=Factory+Coffee+Bangkok" target="_blank" class="map-btn">地圖 <i data-lucide="external-link" size="12"></i></a>
+          </div>
+          <div class="thai-box" onclick="copyText('ถนนพญาไท (ใกล้ BTS ราชเทวี)')">
+            ถนนพญาไท (ใกล้ BTS ราชเทวี)
+          </div>
+          <div class="thai-sub">49 Phaya Thai Rd, Ratchathewi</div>
+        </div>
+
+        <!-- 10 Terminal 21 -->
+        <div class="driver-card">
+          <div class="driver-card-top">
+            <span class="driver-name">🏬 Terminal 21 Asok</span>
+            <a href="https://www.google.com/maps/search/?api=1&query=Terminal+21+Asok" target="_blank" class="map-btn">地圖 <i data-lucide="external-link" size="12"></i></a>
+          </div>
+          <div class="thai-box" onclick="copyText('ห้างเทอร์มินอล 21 อโศก (ติด BTS อโศก)')">
+            ห้างเทอร์มินอล 21 อโศก (ติด BTS อโศก)
+          </div>
+          <div class="thai-sub">88 Sukhumvit Soi 19, Watthana</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 7: 🍜 點餐保命字卡 (FOODWORDS) -->
+    <div id="foodwords" class="tab-content">
+      <div class="custom-table-card">
+        <table>
+          <thead>
+            <tr>
+              <th>中文需求</th>
+              <th>泰文說明（點擊可複製 / 出示）</th>
+              <th>讀音念法</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr onclick="copyText('ไม่เผ็ด')">
+              <td><strong>不要辣</strong></td>
+              <td style="color: var(--primary-dark); font-weight: 800; font-size: 15px;">ไม่เผ็ด</td>
+              <td>Mai Phet</td>
+            </tr>
+            <tr onclick="copyText('ไม่ใส่ผักชี')">
+              <td><strong>不要香菜</strong></td>
+              <td style="color: var(--primary-dark); font-weight: 800; font-size: 15px;">ไม่ใส่ผักชี</td>
+              <td>Mai Sai Phakchi</td>
+            </tr>
+            <tr onclick="copyText('ไม่ใส่ผัก / ไม่ใส่ถั่วงอก')">
+              <td><strong>不要蔬菜 / 不要豆芽</strong></td>
+              <td style="color: var(--primary-dark); font-weight: 800; font-size: 15px;">ไม่ใส่ผัก / ไม่ใส่ถั่วงอก</td>
+              <td>Mai Sai Phak / Mai Sai Thua Ngok</td>
+            </tr>
+            <tr onclick="copyText('แยกน้ำจิ้ม')">
+              <td><strong>沾醬請分開裝</strong></td>
+              <td style="color: var(--primary-dark); font-weight: 800; font-size: 15px;">แยกน้ำจิ้ม</td>
+              <td>Yaek Nam Jim</td>
+            </tr>
+            <tr onclick="copyText('เช็คบิลด้วย')">
+              <td><strong>買單結帳</strong></td>
+              <td style="color: var(--primary-dark); font-weight: 800; font-size: 15px;">เช็คบิลด้วย</td>
+              <td>Check Bin</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 無辣推薦 -->
+      <div class="alert-box alert-info">
+        <i data-lucide="check-circle" size="22" style="flex-shrink: 0; margin-top: 2px;"></i>
+        <div>
+          <h4>🍽️ 無辣無青菜・友善推薦餐點</h4>
+          <p>• <strong>泰式蟹肉煎蛋（Kai Jeow Poo）</strong>：外酥內嫩多汁，完全無蔬菜。<br>
+             • <strong>黃咖哩炒海鮮（Pu Pad Pong Karee）</strong>：濃郁滑蛋甜香超下飯。<br>
+             • <strong>泰式烤豬頸肉（Kor Moo Yang）</strong>：軟嫩鮮甜，沾醬分開裝。<br>
+             • <strong>Thong Smith 船麵</strong>：選 Level 0 不辣、不加空心菜/豆芽/香菜。<br>
+             • <strong>Siam Paragon 海南雞飯</strong>：經典雙拼，雞油飯清香美味完全不辣。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 8: 費用預算 ✕ 行前清單 (BUDGET-CHECK) -->
+    <div id="budget-check" class="tab-content">
+      <!-- 預算表 -->
+      <div class="custom-table-card">
+        <table>
+          <thead>
+            <tr>
+              <th>行程天數</th>
+              <th>主要項目花費明細</th>
+              <th style="text-align: right;">預估金額 (THB)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Day 1</strong></td>
+              <td>海南雞飯 150 + Nikko 按摩 490 + garcon/After You 400 + 合菜 600 + Sky Flyer 250 + 交通 210</td>
+              <td style="text-align: right; font-weight: 700;">約 2,100 ฿</td>
+            </tr>
+            <tr>
+              <td><strong>Day 2</strong></td>
+              <td>Klook 經典一日遊 1,455 + 渡輪 30 + SOOKSIAM 小吃 250 + Thong Smith 船麵 400 + 交通 60</td>
+              <td style="text-align: right; font-weight: 700;">約 2,200 ฿</td>
+            </tr>
+            <tr>
+              <td><strong>Day 3</strong></td>
+              <td>Pista& 250 + Samatha 按摩 1,350 + Pier 21 午餐 150 + T21 伴手禮 1,500 + 晚餐 600 + 酒吧 820 + 交通 120</td>
+              <td style="text-align: right; font-weight: 700;">約 4,800 ฿</td>
+            </tr>
+            <tr>
+              <td><strong>Day 4</strong></td>
+              <td>Factory Coffee 外送 300 + The Wood Land 250 + Grab 機場 130 + 機場輕食 300</td>
+              <td style="text-align: right; font-weight: 700;">約 980 ฿</td>
+            </tr>
+            <tr style="background: #FEF3C7;">
+              <td colspan="2"><strong style="color: #92400E;">總計預估花費（比原 A 方案省 500 ฿，轉移至高空鞦韆與選品店）</strong></td>
+              <td style="text-align: right; font-size: 16px; font-weight: 900; color: #92400E;">約 10,080 ฿</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- 打包與必買清單 -->
+      <div class="checklist-grid">
+        <div class="check-box-group">
+          <h4><i data-lucide="check-circle-2" size="18" style="color: var(--primary);"></i> 行前必備清單</h4>
+          <label class="check-row"><input type="checkbox"> 護照（效期 6 個月以上）+ 電子機票列印</label>
+          <label class="check-row"><input type="checkbox"> TDAC 電子入境卡（出發前 72h 內填妥）</label>
+          <label class="check-row"><input type="checkbox"> 海外網卡（eSIM / 實體 SIM 卡）</label>
+          <label class="check-row"><input type="checkbox"> 台幣千元現鈔（備查 2 萬銖等值外幣現鈔）</label>
+          <label class="check-row"><input type="checkbox"> 下載 Grab & Bolt App</label>
+          <label class="check-row"><input type="checkbox"> Day 2 寺廟服裝（有袖上衣 + 過膝長褲）</label>
+          <label class="check-row"><input type="checkbox"> 常備藥品（止痛、腸胃藥、電解質、防蚊）</label>
+          <label class="check-row"><input type="checkbox"> 預約 Samatha 按摩 Private Room</label>
+        </div>
+
+        <div class="check-box-group">
+          <h4><i data-lucide="shopping-bag" size="18" style="color: var(--gold);"></i> 曼谷必買伴手禮</h4>
+          <label class="check-row"><input type="checkbox"> 手標泰茶 ChaTraMue 金罐/紅罐茶葉包</label>
+          <label class="check-row"><input type="checkbox"> 7-11 熱壓吐司、杜拜開心果巧克力</label>
+          <label class="check-row"><input type="checkbox"> Terminal 21 3F 職人手工金工銀飾</label>
+          <label class="check-row"><input type="checkbox"> garcon dept 貼紙、文創中性選品</label>
+          <label class="check-row"><input type="checkbox"> Song Wat 老街設計墨鏡</label>
+          <label class="check-row"><input type="checkbox"> Doi Kham 皇家低糖芒果乾 & 蜂蜜條</label>
+          <label class="check-row"><input type="checkbox"> NaRaYa 曼谷包（Day 1 Asiatique）</label>
+          <label class="check-row"><input type="checkbox"> KARMAKAMET 香氛錦囊 / PAÑPURI 精油</label>
+        </div>
+      </div>
+
+      <!-- 聯絡資訊 Table -->
+      <div class="custom-table-card" style="margin-top: 20px;">
+        <table>
+          <thead>
+            <tr>
+              <th>重要窗口</th>
+              <th>人員 / 單位</th>
+              <th>聯絡電話 / 資訊</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>送機人員</strong></td>
+              <td>蔣哥</td>
+              <td style="font-weight: 700; color: var(--blue);">0963-833-001</td>
+            </tr>
+            <tr>
+              <td><strong>團體代表人</strong></td>
+              <td>陳俐融</td>
+              <td style="font-weight: 700; color: var(--blue);">0962-021-896</td>
+            </tr>
+            <tr>
+              <td><strong>入住飯店</strong></td>
+              <td>Cross Vibe Bangkok Sukhumvit</td>
+              <td>+66-2-331-9091</td>
+            </tr>
+            <tr>
+              <td><strong>航班時間</strong></td>
+              <td>CI833 去程 / CI836 回程</td>
+              <td>09/16 04:30 桃機一航 8 號櫃檯集合</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast">
+    <i data-lucide="check" size="16"></i>
+    <span id="toast-text">已複製泰文到剪貼簿！</span>
+  </div>
+
+  <script>
+    // Lucide Icons 初始化
+    lucide.createIcons();
+
+    // 分頁切換功能
+    function switchTab(tabId, btn) {
+      // 隱藏所有 tab 內容
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+      // 移除按鈕 active
+      document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+      
+      // 顯示目標 tab 並標亮按鈕
+      document.getElementById(tabId).classList.add('active');
+      btn.classList.add('active');
+
+      // 自動將被點選的 Tab 滾動到可視範圍中
+      btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+
+      // 平滑滾動至導覽列下方
+      window.scrollTo({
+        top: document.querySelector('.tab-bar-sticky').offsetTop - 10,
+        behavior: 'smooth'
+      });
+    }
+
+    // 複製文字與提示
+    function copyText(text) {
+      try {
+        navigator.clipboard.writeText(text).then(() => {
+          showToast(`已複製：${text}`);
+        }).catch(() => {
+          fallbackCopy(text);
+        });
+      } catch (err) {
+        fallbackCopy(text);
+      }
+    }
+
+    function fallbackCopy(text) {
+      const input = document.createElement('input');
+      input.value = text;
+      document.body.appendChild(input);
+      input.select();
+      document.execCommand('copy');
+      document.body.removeChild(input);
+      showToast(`已複製：${text}`);
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      const toastText = document.getElementById('toast-text');
+      toastText.innerText = msg;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 2200);
+    }
+  </script>
+</body>
+</html>
